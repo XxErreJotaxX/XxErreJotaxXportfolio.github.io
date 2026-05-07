@@ -1,4 +1,4 @@
-/* --- Estilo Global (MANTIDO) --- */
+/* --- Estilo Global --- */
 body {
     font-family: 'Press Start 2P', cursive;
     margin: 0;
@@ -82,7 +82,7 @@ body {
     transition: width 2s cubic-bezier(0.1, 0.5, 0.1, 1); /* 2 segundos de pura fluidez */
 }
 
-/* --- 3. CARDS "SELECT MISSION" / PROJETOS (MANTIDA) --- */
+/* --- 3. CARDS "SELECT MISSION" / PROJETOS --- */
 .project-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
 .card-pixel-border { border: 4px solid #333; padding: 20px; background: rgba(17, 17, 17, 0.8); transition: 0.3s; }
 .card-pixel-border:hover { border-color: #00ffcc; box-shadow: 0 0 15px #00ffcc; transform: translateY(-5px); }
@@ -92,7 +92,7 @@ body {
 /* --- Seções Gerais --- */
 section { text-align: center; max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-/* --- GLITCH "VAMOS TRABALHAR JUNTOS" (VERSÃO ORIGINAL) --- */
+/* --- GLITCH --- */
 .glitch {
     position: relative;
     color: #00ffcc;
@@ -131,11 +131,11 @@ section { text-align: center; max-width: 1200px; margin: 0 auto; padding: 20px; 
     100% { transform: translate(0); }
 }
 
-/* --- Seção Sobre (MANTIDO 300PX) --- */
+/* --- Seção Sobre --- */
 .about { text-align: left; max-width: 800px; margin: 50px auto 300px auto; padding: 20px; background: rgba(0,0,0,0.7); }
 .about p { line-height: 1.6; word-spacing: 5px; font-size: 16px; }
 
-/* --- Highlight (MANTIDO) --- */
+/* --- Highlight --- */
 .highlight { display: flex; justify-content: center; align-items: center; height: 60vh; text-align: center; margin-top: -50px; }
 
 /* --- GALERIA (AJUSTES TÉCNICOS PARA O ARRASTE) --- */
@@ -200,12 +200,24 @@ section { text-align: center; max-width: 1200px; margin: 0 auto; padding: 20px; 
 
 /* --- Contato (MANTIDO) --- */
 .contact { margin-top: 50vh; padding-bottom: 100px; }
+
+.contact-email {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.contact-email:hover {
+    text-shadow: 0 0 10px #00ffcc;
+}
+
 .discord-btn {
     display: inline-block; background-color: #7289da; color: white !important;
     padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px; margin-top: 15px;
 }
 
-/* --- Rodapé (MANTIDO) --- */
+/* --- Rodapé --- */
 footer {
     text-align: center;
     padding: 60px 0;
@@ -225,7 +237,7 @@ footer {
 .lightbox.active { display: flex; }
 .lightbox img { max-width: 90%; max-height: 90%; box-shadow: 0 0 20px #00ffcc; }
 
-/* --- MOBILE (POCO X7 PRO) --- */
+/* --- MOBILE --- */
 @media (max-width: 768px) {
     .hamburger { display: flex; }
     .nav-links {
@@ -234,6 +246,13 @@ footer {
     }
     .nav-links.active { display: flex; }
     .glitch { font-size: 26px; }
+
+    /* Ajuste específico para o e-mail no Mobile */
+    .contact-email {
+        font-size: 11px; 
+        word-wrap: break-word;
+    }
+
     .about { margin-bottom: 100px; }
     .contact { margin-top: 20vh; }
     .scroll-gallery img { max-height: 200px; }
